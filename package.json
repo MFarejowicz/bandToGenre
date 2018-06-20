@@ -1,0 +1,24 @@
+{
+  "name": "bandtogenre",
+  "version": "0.1.0",
+  "description": "Get genres for a list of bands",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MFarejowicz/bandToGenre.git"
+  },
+  "author": "Matt Farejowicz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MFarejowicz/bandToGenre/issues"
+  },
+  "homepage": "https://github.com/MFarejowicz/bandToGenre#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "papaparse": "^4.5.0"
+  }
+}

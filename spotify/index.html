@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <title>bandToGenre</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="login">
+        <h1>bandToGenre</h1>
+        <p>Get relevant genres for a single band, or a csv file of bands, using the Spotify API</p>
+        <span>Step 1:</span>
+        <button id="login-button" class="btn btn-primary">Log in with Spotify</button>
+      </div>
+      <div id="loggedin">
+        <div id="user-profile">
+        </div>
+        <div id="oauth">
+        </div>
+        <h1 style="text-decoration: underline"> Band to Genre Tool</h1>
+        <h3>Option 1: Single band</h3>
+        <div class="normalText">
+          <span>Enter band name here: </span>
+          <input id="inp"></input>
+          <button id="search">Search</button>
+        </div>
+        <p id='info' class="normalText">Results will show up here.</p>
+        <br/>
+        <h3>Option 2: CSV Upload</h3>
+        <div id="import" class="fileupload normalText">
+          <span>Upload your CSV file:</span>
+          <input type="file" name="Upload" id="csvUpload" accept=".csv" />
+          <button id="analyze">Analyze file</button>
+        </div>
+        <p id='csvOut'>Results will download to your computer when complete.</p>
+      </div>
+    </div>
+
+    <script id="user-profile-template" type="text/x-handlebars-template">
+      <h1>Logged in as {{display_name}}</h1>
+      <div class="media">
+        <div class="media-body">
+          <dl class="dl-horizontal">
+            <dt>Display name</dt><dd class="clearfix">{{display_name}}</dd>
+            <dt>Id</dt><dd>{{id}}</dd>
+            <dt>Email</dt><dd>{{email}}</dd>
+            <dt>Spotify URI</dt><dd><a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a></dd>
+            <dt>Link</dt><dd><a href="{{href}}">{{href}}</a></dd>
+            <dt>Profile Image</dt><dd class="clearfix"><a href="{{images.0.url}}">{{images.0.url}}</a></dd>
+            <dt>Country</dt><dd>{{country}}</dd>
+          </dl>
+        </div>
+      </div>
+    </script>
+
+    <script id="oauth-template" type="text/x-handlebars-template">
+      <h2>oAuth info</h2>
+      <dl class="dl-horizontal">
+        <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
+      </dl>
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./papaparse.js"></script>
+    <script src="./script.js"></script>
+</html>
