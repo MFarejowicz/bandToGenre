@@ -116,7 +116,8 @@
             outputRow.push(result.genres);
           }
           output.push(outputRow);
-          if (line < data.length-1) {
+          if (line < data.length-2) {
+            // console.log(line + '/' + data.length-2);
             makeCall(data, line+1);
           } else {
             console.log(output);
@@ -126,7 +127,7 @@
         error: function(response) {
           outputRow.push("None");
           output.push(outputRow);
-          if (line < data.length-1) {
+          if (line < data.length-2) {
             makeCall(data, line+1);
           }
         }
