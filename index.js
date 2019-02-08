@@ -14,13 +14,6 @@ utils.parse('./band.csv', function(arr) {
       });
     });
   });
-  // bcCalls(arr, function(newArr) {
-  //   utils.unparse(newArr);
-  // });
-
-  // mbCalls(arr, function(newArr) {
-  //   utils.unparse(newArr);
-  // });
 });
 
 
