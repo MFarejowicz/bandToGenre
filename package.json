@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/MFarejowicz/bandToGenre#readme",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bandcamp-scraper": "^1.2.3",
     "express": "^4.16.3",
     "nodebrainz": "^2.1.1",
